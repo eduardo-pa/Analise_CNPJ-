@@ -1,0 +1,77 @@
+# =============================================================
+#  Segredos — NUNCA commitar
+# =============================================================
+.env
+.env.local
+.streamlit/secrets.toml
+!.env.example                 # o template, sem valores, DEVE ser versionado
+
+# =============================================================
+#  Dados brutos da Receita Federal (pesados demais para o Git)
+# =============================================================
+2026-02.zip
+2026-*/                       # pasta descompactada dos ZIPs mensais
+*.zip
+*.csv
+*.tsv
+*.parquet
+dumps/                        # dumps do Postgres
+*.dump
+*.backup
+
+# ATENÇÃO: não ignore *.sql de forma ampla.
+# DDL, migrations e views materializadas são CÓDIGO e devem ser versionados
+# (init_indexes.sql, mv_comparador_uf_kpis.sql).
+dumps/*.sql
+
+# =============================================================
+#  Python
+# =============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+ENV/
+
+# Testes e cobertura
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# =============================================================
+#  Artefatos gerados
+# =============================================================
+slide*.png
+carrossel_*.pdf
+*.log
+
+# Os gráficos do relatório são versionados de propósito:
+# grafico_distribuicao.png, grafico_media.png
+
+# =============================================================
+#  Editores e ferramentas
+# =============================================================
+.vscode/
+.idea/
+*.swp
+.claude/
+CLAUDE.md
+
+# =============================================================
+#  Sistema operacional
+# =============================================================
+.DS_Store
+Thumbs.db
+desktop.ini

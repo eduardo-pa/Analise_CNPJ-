@@ -1,0 +1,22 @@
+# Aplicação
+streamlit
+pandas
+numpy
+sqlalchemy
+psycopg2-binary
+python-dotenv
+bcrypt
+
+# Visualização
+plotly
+matplotlib
+seaborn
+
+# Relatórios e exportação
+fpdf2
+openpyxl
+toml
+
+# Testes
+pytest
+pytest-mock
